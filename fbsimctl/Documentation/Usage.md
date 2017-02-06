@@ -44,7 +44,7 @@ Actions expose the core features of `fbsimctl` and there are a great number of t
 - `erase` will erase Simulators. There is no default query for this Action as it is destructive, so you must specify a query before the delete string. `erase` will not fail on booted Simulators like `fbsimctl`, as it will ensure that the Simulator is in a shutdown state before attempting to erase.
 - `launch [APPLICATION-BUNDLE-ID|EXECUTABLE-PATH] --arg1 --arg2` will launch an Application or spawn an executable on the booted Simulators. If Application Bundle ID is provided, the Application must be Installed. If a executable path is provided, a daemon will be launched on the Simulator instead. Any argument provided after the Bundle ID or Executable will be provided to the launched process as an argument. Calling `launch` for an Application that is currently running will bring it to the foreground. Multiple daemons with the same executable path can run on a Simulator at the same time. There is also the `relaunch` command, which will ensure that the Application is 'Cold Started', that is to say it will be terminated before re-launching.
 - `list` will print a description of all iOS Targets in specified by the Query. By default this will find all Simulators and Devices on the host.
-- `list-apps` will print a description of the installed Applications on Simulators.
+- `list_apps` will print a description of the installed Applications on Simulators.
 - `listen` allows an HTTP Server or Interactive Shell to be started. Flags and behaviour here is discussed later on.
 -  `open [URL]` will open a URL on the Simulator.
 - `record [start|stop]` will start or stop video recording. Video recording is discussed later on.
